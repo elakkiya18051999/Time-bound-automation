@@ -1,0 +1,45 @@
+package com.payload;
+
+public class TC4_ScheduleButtonPayload {
+	public static String scheduleButton() {
+		return "{\r\n"
+				+ "  \"haveAttachments\": \"Y\",\r\n"
+				+ "  \"triggerType\": \"NONE\",\r\n"
+				+ "  \"startType\": 25,\r\n"
+				+ "  \"ocurrenceCount\": -1,\r\n"
+				+ "  \"advMonths\": [],\r\n"
+				+ "  \"weekDays\": [],\r\n"
+				+ "  \"improvedTriggerType\": \"\",\r\n"
+				+ "  \"jobName\": \"Card Transaction Detail\",\r\n"
+				+ "  \"outputLocale\": 0,\r\n"
+				+ "  \"comment\": \"\",\r\n"
+				+ "  \"outputName\": \"Card Transaction Detail\",\r\n"
+				+ "  \"mailTo\": \"sandeep@acinfotech.com\",\r\n"
+				+ "  \"mailSubject\": \"Card Transaction Detail\",\r\n"
+				+ "  \"timeZone\": \"America/Los_Angeles\",\r\n"
+				+ "  \"monthDays\": \"\",\r\n"
+				+ "  \"isEveryWeekday\": \"Y\",\r\n"
+				+ "  \"mailMessage\": \"Card Transaction Detail\",\r\n"
+				+ "  \"outputType\": [\r\n"
+				+ "    \"xls\"\r\n"
+				+ "  ],\r\n"
+				+ "  \"recurrenceInterval\": 1,\r\n"
+				+ "  \"startDatetime\": \"\",\r\n"
+				+ "  \"endDatetime\": \"\",\r\n"
+				+ "  \"parameters\": {\r\n"
+				+ "    \"Company_Name\": \"Rockford\",\r\n"
+				+ "    \"Card_Type\": \"Business Elite\",\r\n"
+				+ "    \"DateRange\": \"CH_30DAYS\"\r\n"
+				+ "  },\r\n"
+				+ "  \"isSftp\": \"N\",\r\n"
+				+ "  \"isPasswordProtect\": \"N\",\r\n"
+				+ "  \"clientCode\": \"\",\r\n"
+				+ "  \"isPgpEncrypt\": \"N\",\r\n"
+				+ "  \"sftpConfigId\": null,\r\n"
+				+ "  \"sftpOutDirectoryPath\": \"\",\r\n"
+				+ "  \"sftpHostName\": \"\"\r\n"
+				+ "}\r\n"
+				+ "";
+	}
+
+}

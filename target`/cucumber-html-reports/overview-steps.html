@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Time Bound API Automation</td>
+      <td>05 Jan 2024, 10:02</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.stepdefinition.TC1_LoginModuleAPI.user_adds_header_and_send_request(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2198796900">2.198</td>
+              <td class="duration" data-value="2198796900">2.198</td>
+              <td class="duration" data-value="2198796900">2.198</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC1_LoginModuleAPI.user_has_add_token_as_header_and_send_menulist_request(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="581827500">0.581</td>
+              <td class="duration" data-value="581827500">0.581</td>
+              <td class="duration" data-value="581827500">0.581</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC1_LoginModuleAPI.user_has_added_as_header_and_send_authorization_id_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="605135200">0.605</td>
+              <td class="duration" data-value="605135200">0.605</td>
+              <td class="duration" data-value="605135200">0.605</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC1_LoginModuleAPI.user_has_added_as_xauth_and_send_countlist_request(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="580289700">0.580</td>
+              <td class="duration" data-value="580289700">0.580</td>
+              <td class="duration" data-value="580289700">0.580</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC1_LoginModuleAPI.user_has_added_header_and_logsearch_payload(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="855782700">0.855</td>
+              <td class="duration" data-value="855782700">0.855</td>
+              <td class="duration" data-value="855782700">0.855</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC1_LoginModuleAPI.user_has_obtained_the_token_and_send_config_request(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="590730200">0.590</td>
+              <td class="duration" data-value="590730200">0.590</td>
+              <td class="duration" data-value="590730200">0.590</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC1_LoginModuleAPI.user_has_obtained_the_token_and_send_current_user_request(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="576858200">0.576</td>
+              <td class="duration" data-value="576858200">0.576</td>
+              <td class="duration" data-value="576858200">0.576</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC1_LoginModuleAPI.user_has_obtained_the_token_and_send_directorylist_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="591860100">0.591</td>
+              <td class="duration" data-value="591860100">0.591</td>
+              <td class="duration" data-value="591860100">0.591</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_send_and_get_logs_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="604131200">0.604</td>
+              <td class="duration" data-value="604131200">0.604</td>
+              <td class="duration" data-value="604131200">0.604</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_send_authorization_id_logs_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="673289800">0.673</td>
+              <td class="duration" data-value="673289800">0.673</td>
+              <td class="duration" data-value="673289800">0.673</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_send_control_id_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="569446200">0.569</td>
+              <td class="duration" data-value="569446200">0.569</td>
+              <td class="duration" data-value="569446200">0.569</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_send_dashboard_display_data(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="581512700">0.581</td>
+              <td class="duration" data-value="581512700">0.581</td>
+              <td class="duration" data-value="581512700">0.581</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_send_load_data_widget_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="563097300">0.563</td>
+              <td class="duration" data-value="563097300">0.563</td>
+              <td class="duration" data-value="563097300">0.563</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_send_logs_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1769289400">1.769</td>
+              <td class="duration" data-value="1769289400">1.769</td>
+              <td class="duration" data-value="1769289400">1.769</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_send_request_and_get_run_data_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="557718900">0.557</td>
+              <td class="duration" data-value="557718900">0.557</td>
+              <td class="duration" data-value="557718900">0.557</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_send_widget_master_id_resposne(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="601204300">0.601</td>
+              <td class="duration" data-value="601204300">0.601</td>
+              <td class="duration" data-value="601204300">0.601</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_send_widgets_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="891946600">0.891</td>
+              <td class="duration" data-value="891946600">0.891</td>
+              <td class="duration" data-value="891946600">0.891</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_sends_request_of_available_options_in_dropdown(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="595785300">0.595</td>
+              <td class="duration" data-value="595785300">0.595</td>
+              <td class="duration" data-value="595785300">0.595</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_sends_request_of_available_options_in_new_dropdown(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="604367800">0.604</td>
+              <td class="duration" data-value="604367800">0.604</td>
+              <td class="duration" data-value="604367800">0.604</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_sends_request_of_dashboard_details_of_domain(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="572552800">0.572</td>
+              <td class="duration" data-value="572552800">0.572</td>
+              <td class="duration" data-value="572552800">0.572</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_sends_request_of_drag_and_drop_metrics(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="579900700">0.579</td>
+              <td class="duration" data-value="579900700">0.579</td>
+              <td class="duration" data-value="579900700">0.579</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_sends_request_of_drag_and_drop_metrics_new(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="568248100">0.568</td>
+              <td class="duration" data-value="568248100">0.568</td>
+              <td class="duration" data-value="568248100">0.568</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC2_MyDashboardModuleAPI.user_has_added_token_header_and_sends_request_of_metric_list_resposne(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3121365400">3.121</td>
+              <td class="duration" data-value="3121365400">3.121</td>
+              <td class="duration" data-value="3121365400">3.121</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC3_DataDiscoveryModule.user_has_added_token_header_and_send_request_for_display_records_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1229132100">1.229</td>
+              <td class="duration" data-value="1229132100">1.229</td>
+              <td class="duration" data-value="1229132100">1.229</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC3_DataDiscoveryModule.user_has_added_token_header_and_send_request_for_display_the_calls(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="23831908700">23.831</td>
+              <td class="duration" data-value="23831908700">23.831</td>
+              <td class="duration" data-value="23831908700">23.831</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC3_DataDiscoveryModule.user_has_added_token_header_and_send_request_for_domain_clicking_search_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="556717000">0.556</td>
+              <td class="duration" data-value="556717000">0.556</td>
+              <td class="duration" data-value="556717000">0.556</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC3_DataDiscoveryModule.user_has_added_token_header_and_send_request_for_domain_dropdown_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="575036300">0.575</td>
+              <td class="duration" data-value="575036300">0.575</td>
+              <td class="duration" data-value="575036300">0.575</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC3_DataDiscoveryModule.user_has_added_token_header_and_send_request_for_new_widget_controls_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="576287700">0.576</td>
+              <td class="duration" data-value="576287700">0.576</td>
+              <td class="duration" data-value="576287700">0.576</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC3_DataDiscoveryModule.user_has_added_token_header_and_send_request_for_new_widget_details_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="590809400">0.590</td>
+              <td class="duration" data-value="590809400">0.590</td>
+              <td class="duration" data-value="590809400">0.590</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC3_DataDiscoveryModule.user_has_added_token_header_and_send_request_for_old_widget_controls_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="567473900">0.567</td>
+              <td class="duration" data-value="567473900">0.567</td>
+              <td class="duration" data-value="567473900">0.567</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC3_DataDiscoveryModule.user_has_added_token_header_and_send_request_for_old_widget_details_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="563915200">0.563</td>
+              <td class="duration" data-value="563915200">0.563</td>
+              <td class="duration" data-value="563915200">0.563</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC3_DataDiscoveryModule.user_has_added_token_header_and_send_request_for_run_widget_new_timebound_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="555117300">0.555</td>
+              <td class="duration" data-value="555117300">0.555</td>
+              <td class="duration" data-value="555117300">0.555</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC3_DataDiscoveryModule.user_has_added_token_header_and_send_request_for_run_widget_old_timebound_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="572263300">0.572</td>
+              <td class="duration" data-value="572263300">0.572</td>
+              <td class="duration" data-value="572263300">0.572</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_all_output_file_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="580537600">0.580</td>
+              <td class="duration" data-value="580537600">0.580</td>
+              <td class="duration" data-value="580537600">0.580</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_assigning_permission_reponse(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="557794100">0.557</td>
+              <td class="duration" data-value="557794100">0.557</td>
+              <td class="duration" data-value="557794100">0.557</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_data_form_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="690490200">0.690</td>
+              <td class="duration" data-value="690490200">0.690</td>
+              <td class="duration" data-value="690490200">0.690</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_edit_report_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="575240400">0.575</td>
+              <td class="duration" data-value="575240400">0.575</td>
+              <td class="duration" data-value="575240400">0.575</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_execute_report_reponse(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="710485600">0.710</td>
+              <td class="duration" data-value="710485600">0.710</td>
+              <td class="duration" data-value="710485600">0.710</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_export_type_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="720455700">0.720</td>
+              <td class="duration" data-value="720455700">0.720</td>
+              <td class="duration" data-value="720455700">0.720</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_folder_directory_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="570914100">0.570</td>
+              <td class="duration" data-value="570914100">0.570</td>
+              <td class="duration" data-value="570914100">0.570</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_new_timebound_edit_report_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="555111000">0.555</td>
+              <td class="duration" data-value="555111000">0.555</td>
+              <td class="duration" data-value="555111000">0.555</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_old_assigned_role_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="575085600">0.575</td>
+              <td class="duration" data-value="575085600">0.575</td>
+              <td class="duration" data-value="575085600">0.575</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_permission_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="587070100">0.587</td>
+              <td class="duration" data-value="587070100">0.587</td>
+              <td class="duration" data-value="587070100">0.587</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_permissions_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="554408400">0.554</td>
+              <td class="duration" data-value="554408400">0.554</td>
+              <td class="duration" data-value="554408400">0.554</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_report_catalog_information_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="694793600">0.694</td>
+              <td class="duration" data-value="694793600">0.694</td>
+              <td class="duration" data-value="694793600">0.694</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_report_information_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="587077900">0.587</td>
+              <td class="duration" data-value="587077900">0.587</td>
+              <td class="duration" data-value="587077900">0.587</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_report_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="591792500">0.591</td>
+              <td class="duration" data-value="591792500">0.591</td>
+              <td class="duration" data-value="591792500">0.591</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_report_type_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="567154500">0.567</td>
+              <td class="duration" data-value="567154500">0.567</td>
+              <td class="duration" data-value="567154500">0.567</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_report_view_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="587723900">0.587</td>
+              <td class="duration" data-value="587723900">0.587</td>
+              <td class="duration" data-value="587723900">0.587</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_role_reponse(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="558865850">0.558</td>
+              <td class="duration" data-value="558865850">0.564</td>
+              <td class="duration" data-value="1117731700">1.117</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_schedule_button_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="664073200">0.664</td>
+              <td class="duration" data-value="664073200">0.664</td>
+              <td class="duration" data-value="664073200">0.664</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_schedule_submit_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="600467300">0.600</td>
+              <td class="duration" data-value="600467300">0.600</td>
+              <td class="duration" data-value="600467300">0.600</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_search_reponse(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="742668400">0.742</td>
+              <td class="duration" data-value="742668400">0.742</td>
+              <td class="duration" data-value="742668400">0.742</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_searching_reponse(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="550996700">0.550</td>
+              <td class="duration" data-value="550996700">0.550</td>
+              <td class="duration" data-value="550996700">0.550</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_secure_schedule_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="595380900">0.595</td>
+              <td class="duration" data-value="595380900">0.595</td>
+              <td class="duration" data-value="595380900">0.595</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_several_times_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="551605400">0.551</td>
+              <td class="duration" data-value="551605400">0.551</td>
+              <td class="duration" data-value="551605400">0.551</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_submit_reponse(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="664929600">0.664</td>
+              <td class="duration" data-value="664929600">0.664</td>
+              <td class="duration" data-value="664929600">0.664</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC4_ReportModuleAPI.user_adds_header_and_send_request_for_user_response(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="586313800">0.586</td>
+              <td class="duration" data-value="586313800">0.586</td>
+              <td class="duration" data-value="586313800">0.586</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC5_ScheduledHistoryModuleAPI.user_add_request_body_to_get_admin_schedule_history()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC5_ScheduledHistoryModuleAPI.user_has_used_log_token_as_a_header()</td>
+              <td>1</td>
+              <td class="duration" data-value="999400">0.000</td>
+              <td class="duration" data-value="999400">0.000</td>
+              <td class="duration" data-value="999400">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC5_ScheduledHistoryModuleAPI.user_send_for_admin_schedule_endpoint(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="877169100">0.877</td>
+              <td class="duration" data-value="877169100">0.877</td>
+              <td class="duration" data-value="877169100">0.877</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.stepdefinition.TC5_ScheduledHistoryModuleAPI.user_verify_the_status_code_is(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="3001000">0.003</td>
+              <td class="duration" data-value="3001000">0.003</td>
+              <td class="duration" data-value="3001000">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>62</td>
+            <td>63</td>
+            <td class="duration">1.043</td>
+            <td class="duration">23.831</td>
+            <td class="duration">1:5.715</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
